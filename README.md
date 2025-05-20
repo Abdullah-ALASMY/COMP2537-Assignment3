@@ -1,6 +1,8 @@
 Self-graded Assignment 3 Checklist
+
 Abdullah Al Asmy
-Hosted url:
+
+Hosted url: 
 https://dulcet-granita-d24cac.netlify.app/
 
     Criteria	
