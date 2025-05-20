@@ -1,0 +1,119 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f4f8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    transition: background 0.3s;
+}
+
+body.dark {
+    background-color: #222;
+    color: #fff;
+}
+
+.container {
+    text-align: center;
+    width: 90%;
+    max-width: 700px;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    transition: background 0.3s;
+}
+
+body.dark .container {
+    background-color: #333;
+    color: #ddd;
+}
+
+.controls button, .controls select {
+    padding: 10px 15px;
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    background-color: #4CAF50;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+body.dark .controls button, 
+body.dark .controls select {
+    background-color: #555;
+    color: #ddd;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 15px;
+}
+
+.card {
+    width: 100px;
+    height: 140px;
+    background-color: #f0f0f0;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    cursor: pointer;
+    position: relative;
+    perspective: 1000px;
+    transition: transform 0.3s ease-in-out;
+    overflow: hidden;
+}
+
+body.dark .card {
+    background-color: #444;
+    border-color: #666;
+}
+
+.card.flipped .card-front {
+    transform: rotateY(0deg);
+}
+
+.card .card-back, .card .card-front {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    backface-visibility: hidden;
+    border-radius: 10px;
+}
+
+.card .card-back {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 24px;
+}
+
+.card .card-front {
+    background: #fff;
+    transform: rotateY(180deg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+}
+
+.card .card-front img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain;
+}
+
+.card.matched {
+    background-color: #4CAF50;
+    pointer-events: none;
+}
+
+body.dark .card.matched {
+    background-color: #6a9955;
+}
